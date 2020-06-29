@@ -22,7 +22,8 @@ class TeamsList extends Component {
   componentDidMount() {
     teamsService.getAll().then((response) => {
       this.setState({
-        teams: response.status === 200 ? response.data : [],
+        ...this.state,
+        teams: response.data,
       })
     });
   }

@@ -3,15 +3,15 @@ import { api } from '../helpers';
 const basePath = 'v1/equipo';
 
 function getAll() {
-    return api.get(`${basePath}/equipos`);
+    return api.get('v1/equipo/getAll');
 }
 
 function show(teamId) {
-    return api.get(`${basePath}/?id=${teamId}`)
+    return api.get(`${basePath}/equipo?id=${teamId}`)
 }
 
 function create(data) {
-    return api.post(`${basePath}/`, data);
+    return api.post(`${basePath}/equipo`, data);
 }
 
 const teamsService = {
