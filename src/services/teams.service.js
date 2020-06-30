@@ -3,7 +3,7 @@ import { api } from '../helpers';
 const basePath = 'v1/equipo';
 
 function getAll() {
-    return api.get('v1/equipo/getAll');
+    return api.get(`${basePath}/getAll`);
 }
 
 function show(teamId) {
